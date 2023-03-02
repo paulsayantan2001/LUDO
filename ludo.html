@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="ludo.css">
+    <link rel="stylesheet" href="<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100;1,300&display=swap" rel="stylesheet">">
+</head>
+<body>
+    <div class="container">
+        <h1>SP LUDO</h1>
+        <div class="dice">
+            <p>Player 1</p>
+            <img class ="img1" src="images/dice1.png" id="check1">
+
+        </div>
+        <div class="dice">
+            <p>Player 2</p>
+            <img class="img2" src="images/dice6.png" id="check2">
+        </div>
+    </div>
+    <button onclick="runludo()"> click Me</button>
+</div>
+</div>
+<script>
+    runludo = () =>{
+    const player1 = Math.floor(Math.random()*6)+1;
+    const player1dice =`images/dice${player1}.png`;
+    document.getElementById('check1').setAttribute('src',player1dice);
+    const player2 = Math.floor(Math.random()*6)+1;
+    const player2dice =`images/dice${player2}.png`;
+    document.getElementById('check2').setAttribute('src',player2dice);
+    }
+</script>
+</body>
+</html>
